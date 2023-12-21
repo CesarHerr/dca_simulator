@@ -10,12 +10,29 @@ const initialState = {
   trades: [],
   error: null,
   isLoading: false,
+  startDate: yearAgo,
+  endDate: today,
+  dcaData: [],
+  inversion: 100000
 }
 
 const tradeSlice = createSlice({
   name: 'trades',
   initialState,
-  reducers: {},
+  reducers: {
+    setStartDate: (state, action) => {
+      state.startDate = action.payload
+    },
+    setEndDate: (state, action) => {
+      state.endDate = action.payload
+    },
+    setDcaData: (state, action) => {
+      state.dcaData = action.payload
+    },
+    setInversion: (state, action) => {
+      state.inversion = action.payload
+    }
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchTrades.pending, (state) => {
