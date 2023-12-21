@@ -20,16 +20,16 @@ function Simulator() {
   }, [])
 
   return (
-    <>
+    <main>
       <h1 className="text-3xl text-center py-10 md:5xl font-extrabold">
         {' '}
         DCA Simulator
       </h1>
       <div className='flex flex-col'>
-        <div className="flex flex-col md:flex-row">
+        <section className="flex flex-col md:flex-row">
           <FormData />
           {isLoading ? '' : <LineChart />}
-        </div>
+        </section>
         {isLoading ? <Loader /> : <DataTable />}
       </div>
       <footer className='md:fixed bottom-0 m-3'>
@@ -44,7 +44,7 @@ function Simulator() {
           </p>         
         </div>      
       </footer>
-    </>
+    </main>
   );
 }
 
