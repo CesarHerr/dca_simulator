@@ -1,4 +1,3 @@
-import './App.css'
 import Simulator from './components/Simulator'
 
 function App () {
