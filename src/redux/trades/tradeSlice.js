@@ -1,13 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit'
 import fetchTrades from './budaApi'
 
-const today = new Date().getTime()
+let today = new Date()
+today.setUTCHours(12, 0, 0, 0)
+today = today.getTime() 
+
 let yearAgo = new Date(today)
 yearAgo.setMonth(yearAgo.getMonth() - 11)
+yearAgo.setUTCHours(12, 0, 0, 0)
 yearAgo = yearAgo.getTime()
 
 const initialState = {
-  trades: [],
   error: null,
   isLoading: false,
   startDate: yearAgo,
