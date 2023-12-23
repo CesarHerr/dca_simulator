@@ -85,10 +85,13 @@ The Buda-DCA-Simulator is a Web application for checking the Dollar-Cost Averagi
 - **Gitflow**
 - **Used Chartjs to see data fluctuation**
 - **Get data from Buda API**
-- **Created a Docker container**
+- **Created a Docker image**
 - **Deployed on GitHub pages**
 
 <!-- LIVE DEMO -->
+
+
+[BupaApp.webm](https://github.com/CesarHerr/dca_simulator/assets/111262493/4f07992e-7bfe-45d8-aa0a-a441d6e06a40)
 
 
 
@@ -102,6 +105,8 @@ The Buda-DCA-Simulator is a Web application for checking the Dollar-Cost Averagi
 
 > You can see the live demo of this project: [click here](https://cesarherr.github.io/dca_simulator/)
 
+
+> You can find the Docker image 👉 : [click here](https://hub.docker.com/repository/docker/cesarherr/dca_simulator/general)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -182,14 +187,18 @@ The project was developed follow the following requirements:
 
 
 
-1. Necesitamos calcular la ganancia mes a mes para un usuario que compre el primero de cada mes a las 12:00 UTC, los últimos 12 meses (desde la fecha en que se ingresa a la página)
+1. Necesitamos calcular la ganancia mes a mes para un usuario que compre el primero de cada mes
+   a las 12:00 UTC, los últimos 12 meses (desde la fecha en que se ingresa a la página)
 
-  - Aquí al momento de ingresar a la página se carga el cálculo de los últimos 12 meses, Tomando los primeros de cada mes a las 12:00PC UTC,  con una inversión de $100,000 CLP, estos datos son lo primero que ve el usuario.
+  - Aquí al momento de ingresar a la página se carga el cálculo de los últimos 12 meses, Tomando
+   los primeros de cada mes a las 12:00PC UTC,  con una inversión de $100,000 CLP, estos datos son
+   lo primero que ve el usuario.
 
 
 2. El usuario debe ser capaz de indicar el monto en CLP que invertirá cada mes
 
-  - Input creado para ingresar Monto y fecha, la fecha a cargar sigue siendo los días 1 de cada mes a las    12:00PM UTC, solo puede indicar mes y año. 
+  - Input creado para ingresar Monto y fecha, la fecha a cargar sigue siendo los días 1 de cada mes
+    a las 12:00PM UTC, solo puede indicar mes y año. 
 
 
 3. Debe existir una forma gráfica de ver la evolución de la inversión (en CLP)
@@ -197,9 +206,11 @@ The project was developed follow the following requirements:
   - Creado gráfico con Chartjs library. 
 
 
-4. Debe existir una tabla o estructura similar donde se muestre la variación en CLP y % de la inversión.
+4. Debe existir una tabla o estructura similar donde se muestre la variación en CLP
+   y % de la inversión.
 
-  - Tabla completa creada con datos obtenidos de la API de Buda.com, se actualiza cada vez que se ingresan nuevos datos. 
+  - Tabla completa creada con datos obtenidos de la API de Buda.com, se actualiza cada
+   vez que se ingresan nuevos datos. 
 
 
 ```
@@ -216,7 +227,8 @@ The project was developed follow the following requirements:
 
 2. Que sea posible indicar la fecha de inicio y término de la simulación.
 
-  - Usuario puede ingresar fecha de inicio y término, pero se mantiene el concepto de cálculo para el día 1 de cada mes a las 12:00 UTC.
+  - Usuario puede ingresar fecha de inicio y término, pero se mantiene el concepto
+   de cálculo para el día 1 de cada mes a las 12:00 UTC.
 
 
 3. Que el diseño funcione tanto en móvil como desktop.
