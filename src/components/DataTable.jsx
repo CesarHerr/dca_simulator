@@ -7,7 +7,7 @@ function DataTable() {
   let sumInversion = 0;
 
   return (
-    <section className="md:ml-[18rem]">
+    <section className="md:ml-[18rem]  pt-20">
       <h2 className="text-4xl text-center pt-5">Tabla Variación Inversión</h2>
       <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-10">
         <div className="mt-12 shadow-sm border rounded-lg overflow-x-auto">

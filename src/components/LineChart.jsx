@@ -81,7 +81,7 @@ function LineChart() {
   };
 
   return (
-    <section className="md:ml-[18rem] w-full">
+    <section className="md:ml-[18rem] w-full h-screen">
       <div className="">
         <p className="text-lg text-pretty text-gray-600 my-5 w-10/12 mx-auto">
           Rendimiento histórico del DCA al invertir en Buda.com mensualmente con
