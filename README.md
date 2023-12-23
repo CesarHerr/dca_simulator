@@ -29,7 +29,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 DCA Simulator<a name="about-project"></a>
+# 📖 Buda DCA Simulator<a name="about-project"></a>
 
 The Buda-DCA-Simulator is a Web application for checking the Dollar-Cost Averaging (in this case CLP), this is a time-tested investment strategy where an investor divides up the total amount to be invested across periodic purchases of a target asset to reduce the impact of volatility on the overall purchase
 
@@ -96,7 +96,11 @@ The Buda-DCA-Simulator is a Web application for checking the Dollar-Cost Averagi
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> You can see the live demo of this project: [click here]()
+### ⚠️   Important ⚠️
+
+- If you are unable to see the data in the app, it might be due to a CORS (Cross-Origin Resource Sharing) problem. You will need to install a plugin on your browser. For Chrome, use this [extension](https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf)
+
+> You can see the live demo of this project: [click here](https://cesarherr.github.io/dca_simulator/)
 
 
 
@@ -207,11 +211,13 @@ The project was developed follow the following requirements:
 
 1. Que la tarea funcione en un ambiente contenerizado (Docker o similar)
 
-   - Proyecto contenerizado en Docker.
+  - Proyecto contenerizado en Docker.
+
 
 2. Que sea posible indicar la fecha de inicio y término de la simulación.
 
-   - Usuario puede ingresar fecha de inicio y término, pero se mantiene el concepto de cálculo para el día 1 de cada mes a las 12:00 UTC.
+  - Usuario puede ingresar fecha de inicio y término, pero se mantiene el concepto de cálculo para el día 1 de cada mes a las 12:00 UTC.
+
 
 3. Que el diseño funcione tanto en móvil como desktop.
 
