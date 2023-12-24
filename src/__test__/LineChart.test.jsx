@@ -41,7 +41,7 @@ describe('LineChart Component', () => {
 
     
 
-    const chart = container.querySelector('canvas'); // Ajusta según la estructura del gráfico
+    const chart = container.querySelector('canvas');
     expect(chart).not.toBeNull();
   });
 });
