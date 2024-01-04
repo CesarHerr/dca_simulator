@@ -1,10 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit'
-import tradeReducer from './trades/tradeSlice'
+import { configureStore } from '@reduxjs/toolkit';
+import tradeReducer from './trades/tradeSlice';
 
 const store = configureStore({
   reducer: {
-    trades: tradeReducer
-  }
-})
+    trades: tradeReducer,
+  },
+});
 
-export default store
+export default store;
