@@ -3,12 +3,14 @@ import {
   setStartDate,
   setEndDate,
   setInversion,
+  setInversion2,
+  setMarket,
 } from '../redux/trades/tradeSlice';
 import useFetchTradesForDateRange from './custom/useFetchTradesForDateRange';
 
 function FormData() {
   const dispatch = useDispatch();
-  const { startDate, endDate, inversion } = useSelector(
+  const { startDate, endDate, inversion, inversion2, market } = useSelector(
     (state) => state.trades
   );
 
@@ -29,12 +31,27 @@ function FormData() {
 
   // save the amount in the state
   const handleAmount = (e) => {
-    dispatch(setInversion(Number(e.target.value)));
+    dispatch(setInversion2(Number(e.target.value)));
+  };
+
+//save the market to fetch
+  const handleMarket = (e) => {
+    dispatch(setMarket(e.target.value));
   };
 
   // fetch the trades for the date range
   const handleSubmit = () => {
-    fetchTradesForDateRange(startDate, endDate, inversion);
+    const today = new Date();
+    if (
+      inversion < 0 ||
+      today.getTime() < endDate ||
+      today.getTime() < startDate
+    ) {
+      alert('Ingrese nuevamente los datos');
+    } else {
+      fetchTradesForDateRange(startDate, endDate, inversion);
+      dispatch(setInversion(Number(inversion2)));
+    }
   };
 
   return (
@@ -77,6 +94,19 @@ function FormData() {
           required
         />
       </div>
+      <div className="flex flex-col w-full">
+        <label htmlFor="selection" className="inline">
+          Tipo de Moneda
+        </label>
+        <select name="pets" id="pet-select" onChange={handleMarket}>
+          <option value="">{market}</option>
+          <option value="btc-clp">BTC</option>
+          <option value="eth-clp">ETH</option>
+          <option value="ltc-clp">LTC</option>
+          <option value="usdc-clp">USDC</option>
+        </select>
+      </div>
+
       <button
         type="button"
         onClick={handleSubmit}
