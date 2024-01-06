@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import fetchTrades from './budaApi';
 
 let today = new Date();
+today.setDate(1);
 today.setUTCHours(12, 0, 0, 0);
 today = today.getTime();
 

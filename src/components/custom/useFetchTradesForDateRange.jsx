@@ -11,7 +11,6 @@ const useFetchTradesForDateRange = () => {
     let amount = 0;
     const dates = [];
     const currentDate = new Date(startDate);
-    currentDate.setDate(1);
 
     while (currentDate.getTime() <= endDate) {
       let fetchData = {
